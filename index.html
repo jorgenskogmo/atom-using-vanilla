@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <title>lit-glue-using-vanilla</title>
+    <link rel="stylesheet" href="./src/main.css" />
+    <script type="module" src="./src/main.ts"></script>
+</head>
+
+<body>
+    <div style="text-align: end;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;">
+        <atom-switch-darkmode default="light"></atom-switch-darkmode>
+    </div>
+
+
+    <atom-toast></atom-toast>
+
+    <atom-button onclick="toast('alo', 'der')"></atom-button>
+
+    <p class="xs">xs: a first line <br>and a second line</p>
+    <p class="sm">sm: a first line <br>and a second line</p>
+
+    <h2 role="subheading">
+        atom-using-vanilla
+    </h2>
+
+    <p>
+        A demo of using the <code>atom-lit</code> library from a vanilla js app
+    </p>
+
+
+
+    <h3>Range</h3>
+
+    <atom-range id="btn0" min="1" max="60" value="20" bind="num"></atom-range>
+    <p>
+        Direct state-subscriber: <span id="state0out" style="color:#09f">n/a</span>
+        <br />
+        A "monitor" for the state-value
+        <code>num</code>: <atom-binding bind="num"></atom-binding>
+        <br />
+        Output from change-event: <span id="btn0out" style="color:rgb(0, 110, 255)">non</span>
+    </p>
+    <hr />
+    <p>(Experimental) auto docs:</p>
+
+    <code id="range-docs-tag">range-tag</code>
+    <div id="range-docs-attrs">range-docs</div>
+    <hr />
+
+    <h3>Button</h3>
+
+    <atom-button label="Default"></atom-button>
+    <atom-button variant="normal" label="Normal"></atom-button>
+    <atom-button variant="primary" label="Primary"></atom-button>
+    <atom-button variant="destructive" label="Destructive"></atom-button>
+    <atom-button variant="constructive" label="Constructive"></atom-button>
+    <atom-button variant="subtle" label="Subtle"></atom-button>
+    <atom-button variant="outline" label="Outline"></atom-button>
+
+    <br />
+    <atom-button label="" bind="clicks">
+        <atom-icon slot="center" name="aperture"></atom-icon>
+    </atom-button>
+
+    <atom-button label="Left Icon">
+        <div slot="left"><atom-icon name="mail"></atom-icon></div>
+    </atom-button>
+
+    <atom-button label="Right Icon">
+        <div slot="right"><atom-icon name="aperture"></atom-icon></div>
+    </atom-button>
+
+    <atom-button label="Two Icons">
+        <div slot="left"><atom-icon name="x"></atom-icon></div>
+        <div slot="right"><atom-icon name="aperture"></atom-icon></div>
+    </atom-button>
+
+
+    <hr />
+
+    <atom-button label="" bind="clicks">
+        <atom-icon slot="center" name="plus-square"></atom-icon>
+    </atom-button>
+
+    <code>clicks</code>: <atom-binding bind="clicks"></atom-binding>
+
+
+    <h3>Button Group</h3>
+
+    <atom-button-group selected="one" options="one, two, three and four">
+    </atom-button-group>
+
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+body {
+    margin:0;
+    padding: 1rem 2rem;
+
+    color: var(--atom-fg);
+    background: var(--atom-bg);
+}
